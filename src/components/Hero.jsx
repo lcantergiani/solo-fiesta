@@ -95,7 +95,7 @@ export default function Hero() {
               Casa Olivos de Chacabuco, Colina
             </a>
             <p className="mt-1 max-w-2xl text-[0.6rem] leading-relaxed tracking-normal lining-nums tabular-nums sm:text-lg">
-              el día sábado 14 de noviembre a las 17:00 horas
+              el día sábado 14 de noviembre a las 22:00 horas
             </p>
             <a
               href={wedding.map.directionsUrl}

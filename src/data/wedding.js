@@ -11,18 +11,18 @@ export const wedding = {
     groom: ['Rodrigo Cantergiani Rabanal', 'Alejandra Merello Díaz'],
     bride: ['Cristián Peirano Novoa', 'María Soledad Caroca Baeza'],
   },
-  // Fecha y hora del evento (14 de noviembre, 17:00hs).
+  // Fecha y hora del evento (14 de noviembre, 22:00hs).
   // El año se toma automáticamente: si el 14/11 de este año ya pasó, usa el próximo.
-  date: getWeddingDate(11, 14, 17, 0),
-  dateLabel: '14 de Noviembre · 17:00 hs',
+  date: getWeddingDate(11, 14, 22, 0),
+  dateLabel: '14 de Noviembre · 22:00 hs',
   dressCode: 'Etiqueta formal',
   registryUrl: 'https://www.noviosparis.cl/search-couple',
   registryCode: '6971016',
   venues: {
     ceremony: {
       name: 'Casa Olivos',
-      detail: 'Ceremonia',
-      time: '17:00 hs',
+      detail: 'Fiesta',
+      time: '22:00 hs',
     },
     party: {
       name: 'Casa Olivos',
