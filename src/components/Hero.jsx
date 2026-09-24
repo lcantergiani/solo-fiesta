@@ -65,65 +65,72 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          {/* Centro: capilla + nombres + invitación */}
+          {/* Centro: capilla + invitación a la fiesta */}
           <motion.div variants={item} className="flex flex-col items-center">
             <img
               src={`${import.meta.env.BASE_URL}capilla2.png`}
               alt="Capilla"
-              className="mx-auto w-40 sm:w-56"
+              className="mx-auto w-28 sm:w-40"
             />
 
-            <h1 className="mt-6 flex flex-col items-center gap-1 text-base leading-tight sm:mt-10 sm:text-2xl">
-              <span>{wedding.couple.groom}</span>
-              <span>{wedding.couple.bride}</span>
+            <p className="mt-6 text-[0.6rem] leading-relaxed tracking-normal sm:mt-8 sm:text-lg">
+              Participan a usted el matrimonio de sus hijos
+            </p>
+
+            <h1 className="mt-4 flex items-center justify-center gap-3 text-lg leading-tight sm:mt-6 sm:text-3xl">
+              <span>{wedding.couple.groom.split(' ')[0]}</span>
+              <span className="text-accent">&amp;</span>
+              <span>{wedding.couple.bride.split(' ')[0]}</span>
             </h1>
 
-            <p className="mt-8 max-w-3xl text-[0.6rem] leading-relaxed tracking-normal lining-nums tabular-nums sm:mt-14 sm:text-lg">
-              Te invitamos a celebrar nuestro matrimonio con una ceremonia
-              religiosa en Casa Olivos de Chacabuco, Colina el día sábado 14 de
-              noviembre a las 17:00 horas.
+            <p className="mt-6 max-w-2xl text-[0.6rem] leading-relaxed tracking-normal sm:mt-10 sm:text-lg">
+              Y le invitan a una fiesta que se efectuará en
             </p>
+            <a
+              href={wedding.map.directionsUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-1 max-w-2xl text-[0.6rem] leading-relaxed tracking-normal underline underline-offset-2 transition-colors hover:text-accent sm:text-lg"
+            >
+              Casa Olivos de Chacabuco, Colina
+            </a>
+            <p className="mt-1 max-w-2xl text-[0.6rem] leading-relaxed tracking-normal lining-nums tabular-nums sm:text-lg">
+              el día sábado 14 de noviembre a las 17:00 horas
+            </p>
+            <a
+              href={wedding.map.directionsUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-3 text-[0.6rem] tracking-normal underline underline-offset-2 transition-colors hover:text-accent sm:text-lg"
+            >
+              Ver cómo llegar
+            </a>
           </motion.div>
 
-          {/* Pie: recepción/ubicación · lista de novios · confirmar (centrado) */}
+          {/* Pie: confirmar asistencia · lista de novios */}
           <motion.div
             variants={item}
-            className="w-full text-[0.6rem] leading-tight tracking-normal sm:mt-12 sm:text-lg"
+            className="flex w-full items-end justify-between gap-3 text-[0.6rem] leading-tight tracking-normal sm:mt-12 sm:gap-6 sm:text-lg"
           >
-            <div className="flex w-full items-end justify-between gap-3 sm:gap-6">
-              <div className="flex flex-col items-start space-y-1 text-left sm:space-y-0">
-                <p>Y a una recepción</p>
-                <p>en el mismo lugar</p>
-                <a
-                  href={wedding.map.directionsUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="underline-offset-2 transition-colors hover:text-accent hover:underline"
-                >
-                  (Ver ubicación)
-                </a>
-              </div>
-
-              <div className="flex flex-col items-end space-y-1 text-right sm:space-y-0">
-                <p>Novios Paris</p>
-                <p className="lining-nums tabular-nums">({wedding.registryCode})</p>
-                <a
-                  href={wedding.registryUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="underline-offset-2 transition-colors hover:text-accent hover:underline"
-                >
-                  Ver lista
-                </a>
-              </div>
-            </div>
-
-            <div className="mt-6 text-center">
+            <div className="flex flex-col items-start text-left">
               <a
                 href="#rsvp"
-                className="underline-offset-2 transition-colors hover:text-accent hover:underline"
+                className="underline underline-offset-2 transition-colors hover:text-accent"
               >
-                Confirma aquí
+                Confirmar asistencia
+              </a>
+            </div>
+
+            <div className="flex flex-col items-end space-y-1 text-right sm:space-y-0">
+              <p>Novios Paris</p>
+              <p className="lining-nums tabular-nums">Código {wedding.registryCode}</p>
+              <a
+                href={wedding.registryUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="underline underline-offset-2 transition-colors hover:text-accent"
+              >
+                Ver lista
               </a>
             </div>
           </motion.div>
