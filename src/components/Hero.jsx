@@ -79,8 +79,9 @@ export default function Hero() {
             </h1>
 
             <p className="mt-8 max-w-3xl text-[0.6rem] leading-relaxed tracking-normal lining-nums tabular-nums sm:mt-14 sm:text-lg">
-              Te invitamos a una fiesta en Casa Olivos de Chacabuco, Colina el
-              día sábado 14 de noviembre a las 22:00 horas.
+              Te invitamos a celebrar nuestro matrimonio con una fiesta en Casa
+              Olivos de Chacabuco, Colina el día sábado 14 de noviembre a las
+              22:00 horas.
             </p>
           </motion.div>
 
@@ -91,8 +92,6 @@ export default function Hero() {
           >
             <div className="flex w-full items-end justify-between gap-3 sm:gap-6">
               <div className="flex flex-col items-start space-y-1 text-left sm:space-y-0">
-                <p>Y a una recepción</p>
-                <p>en el mismo lugar</p>
                 <a
                   href={wedding.map.directionsUrl}
                   target="_blank"
