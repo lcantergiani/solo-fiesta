@@ -91,7 +91,7 @@ export default function Hero() {
             className="w-full text-[0.6rem] leading-tight tracking-normal sm:mt-12 sm:text-lg"
           >
             <div className="flex w-full items-end justify-between gap-3 sm:gap-6">
-              <div className="flex flex-col items-start space-y-1 text-left sm:space-y-0">
+              <div className="flex max-w-[7rem] flex-col items-start space-y-1 text-left sm:max-w-[12rem] sm:space-y-0">
                 <p>Casa Olivos de Chacabuco, Colina</p>
                 <a
                   href={wedding.map.directionsUrl}
