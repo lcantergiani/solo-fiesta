@@ -92,13 +92,14 @@ export default function Hero() {
           >
             <div className="flex w-full items-end justify-between gap-3 sm:gap-6">
               <div className="flex flex-col items-start space-y-1 text-left sm:space-y-0">
+                <p>Casa Olivos de Chacabuco, Colina</p>
                 <a
                   href={wedding.map.directionsUrl}
                   target="_blank"
                   rel="noreferrer"
                   className="underline-offset-2 transition-colors hover:text-accent hover:underline"
                 >
-                  (Ver ubicación)
+                  Ver ubicación
                 </a>
               </div>
 
